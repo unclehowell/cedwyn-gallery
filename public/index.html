@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Photographs, maps, scans and press images of Tŷ Mawr (Great House Farm), Llandough-juxta-Penarth, in one searchable gallery. Each picture is shown from the collection that holds it.">
+<title>Gallery · Tŷ Mawr (Great House Farm) · Cedwyn</title>
+<link rel="stylesheet" href="gallery.css?v=0.2.0">
+</head>
+<body>
+<main class="gw" id="gallery" data-db="data/gallery.json">
+<header class="g-head">
+<p class="g-crumb"><a href="/">Cedwyn</a> / Gallery</p>
+<p class="g-eyebrow">Tŷ Mawr · Great House Farm · Llandough-juxta-Penarth</p>
+<h1>Gallery</h1>
+<p class="g-lede">Photographs, maps, scans and press images of the farm, its buildings and the people who lived there. Every picture is shown from the collection that holds it; nothing here is a copy. Tap a picture to see it full size.</p>
+<p class="g-stats" id="g-stats" aria-live="polite">Loading the gallery…</p>
+</header>
+
+<form class="g-tools" role="search" onsubmit="return false">
+<label class="g-sr" for="g-q">Search the pictures</label>
+<input id="g-q" type="search" placeholder="Search: barn, 1988, map, kitchen…" autocomplete="off" enterkeyhint="search">
+<div class="g-chips" id="g-chips" role="group" aria-label="Collections"></div>
+</form>
+
+<section class="g-grid" id="g-grid" aria-label="Pictures"></section>
+<p class="g-none" id="g-none" hidden>No picture matches that search.</p>
+<p class="g-more"><button type="button" id="g-more" hidden>Show more</button></p>
+
+<section class="g-how" aria-labelledby="g-how-h">
+<h2 id="g-how-h">How this gallery is kept</h2>
+<p>The gallery has its own small database, <a href="data/gallery.json">gallery.json</a>, built from the image inventory of the Wayback archive. Titles are as the inventory gives them. Each picture loads from the place that already holds it, so provenance stays with the original. Pictures listed in the inventory but not served by the site at the last check are counted above and not shown.</p>
+<p>To trace a picture to its catalogue record, search the <a href="/catalogue/">evidence catalogue</a> with the picture's title or date.</p>
+</section>
+
+<footer class="g-foot"><p>Gallery · v0.2.0 · <a href="/catalogue/">Evidence catalogue</a> · <a href="/wayback/">Wayback archive</a> · <a href="/fb/">Farmbook</a></p></footer>
+</main>
+
+<dialog class="g-box" id="g-box" aria-label="Picture">
+<div class="g-box-bar">
+<button type="button" class="g-btn" data-act="prev" aria-label="Previous picture">‹</button>
+<span class="g-box-n" id="g-box-n"></span>
+<button type="button" class="g-btn" data-act="next" aria-label="Next picture">›</button>
+<button type="button" class="g-btn g-x" data-act="close" aria-label="Close">×</button>
+</div>
+<figure class="g-fig">
+<img id="g-box-img" alt="">
+<figcaption id="g-box-cap"></figcaption>
+</figure>
+</dialog>
+
+<noscript><p class="gw">This gallery needs JavaScript to draw the pictures. The list of pictures is in <a href="data/gallery.json">gallery.json</a>.</p></noscript>
+<script src="gallery.js?v=0.2.0" defer></script>
+</body>
+</html>
